@@ -6,7 +6,7 @@
 /*   By: vfleskes <viktor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 10:38:49 by vfleskes          #+#    #+#             */
-/*   Updated: 2026/11/25 22:15:17 by vfleskes         ###   ########.fr       */
+/*   Updated: 2026/11/26 14:40:39 by vfleskes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ void	sort_simple(t_node **a, t_node **b)
 	int	pos;
 	int	index;
 
-	assign_index(*a);
 	size = stack_size(*a);
 	index = 0;
+	if (is_sorted(*a))
+		return ;
 	while (size > 0)
 	{
 		pos = find_index_pos(*a, index);

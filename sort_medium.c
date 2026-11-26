@@ -6,7 +6,7 @@
 /*   By: arngomes <arngomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 14:56:32 by arngomes          #+#    #+#             */
-/*   Updated: 2026/11/25 14:07:40 by arngomes         ###   ########.fr       */
+/*   Updated: 2026/11/26 16:08:42 by arngomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ void	sort_medium(t_node **a, t_node **b)
 	n = stack_size(*a);
 	if (n < 2 || compute_disorder(*a) == 0.0)
 		return ;
-	assign_index(*a);
 	push_chunks(a, b, chunk_size(n));
 	push_back(a, b);
 }

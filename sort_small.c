@@ -6,13 +6,13 @@
 /*   By: vfleskes <viktor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 12:23:48 by vfleskes          #+#    #+#             */
-/*   Updated: 2026/11/26 00:21:16 by vfleskes         ###   ########.fr       */
+/*   Updated: 2026/11/26 14:37:40 by vfleskes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_sorted(t_node *stack)
+int	is_sorted(t_node *stack)
 {
 	while (stack && stack->next)
 	{
@@ -81,7 +81,6 @@ void	sort_small(t_node **a, t_node **b)
 		return (sa(a));
 	if (size == 3)
 		return (sort_three(a));
-	assign_index(*a);
 	pushes = size - 3;
 	index = 0;
 	while (pushes-- > 0)

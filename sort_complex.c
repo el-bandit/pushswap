@@ -6,7 +6,7 @@
 /*   By: vfleskes <viktor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 13:28:57 by vfleskes          #+#    #+#             */
-/*   Updated: 2026/11/25 23:22:42 by vfleskes         ###   ########.fr       */
+/*   Updated: 2026/11/26 14:41:03 by vfleskes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ void	sort_complex(t_node **a, t_node **b)
 	int		max_bits;
 	int		bit;
 
-	assign_index(*a);
 	size = stack_size(*a);
 	max_bits = get_max_bits(size - 1);
 	bit = 0;
+	if (is_sorted(*a))
+		return ;
 	while (bit < max_bits)
 	{
 		size = stack_size(*a);
